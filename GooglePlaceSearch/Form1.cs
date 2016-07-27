@@ -23,14 +23,20 @@ namespace GooglePlaceSearch
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var url = @"https://maps.googleapis.com/maps/api/place/textsearch/json?query=brasil&types=beauty_salon&hasNextPage=true&nextPage()=true&key=AIzaSyB-GrtUkpeska3NIDFhD5bxS_ha9mVCKMY";
+            var url = @"https://maps.googleapis.com/maps/api/place/textsearch/json?query=São Paulo Vila Mariana&types=beauty_salon&hasNextPage=true&nextPage()=true&key=AIzaSyB-GrtUkpeska3NIDFhD5bxS_ha9mVCKMY";
 
             /*
              * Query 1: filtro por tipo, query e solicita geração do next_page_token
              * https://maps.googleapis.com/maps/api/place/textsearch/xml?query=brasil&types=beauty_salon&hasNextPage=true&nextPage()=true&key=AIzaSyB-GrtUkpeska3NIDFhD5bxS_ha9mVCKMY
+             *
+             *
+             * Próxima página de resultado JSON: igual a query anterior + o atributo next_page_token retornado, passando no parâmetro pagetoken 
+             * https://maps.googleapis.com/maps/api/place/textsearch/json?query=São Paulo Vila Mariana&types=beauty_salon&hasNextPage=true&nextPage()=true&key=AIzaSyB-GrtUkpeska3NIDFhD5bxS_ha9mVCKMY&pagetoken=CvQB4QAAAHT7S_wz0xOOWXSPpNHraLj_Z37ciwN2M4OdO8W_9pA7RS-h9IpIjhaBWwIpKhBT8zdouOkFIL86Rp7GW8Po1KztqTJjqXE6hDoRbfFFE4hESffe0WXg4Uym2vGHCZ99kBpOOZSoY8ADogI3TQ0MZgihWMQejXUGybOx0jtKTiHir4iwhU3mhX5JQ2PswGMORBsCKjWNiR4gh_udeDY04Gvi-nNTnhcPCRvU9-aJBbPi_xlH6nvRzUhnVPkOzoaUQudjGVsDxK03wuDY3Hn5bIkXyRz1W1yFmwRKROtX8QaKgNJggGrUx2A3ZXCkQibCyxIQcfTao1JUk2CaQIhfYV7GDxoUGtkPZA7MVC29rfpUHpDYRZRgHPs
              * 
-             * Próxima página de resultado: igual a query anterior + o atributo next_page_token retornado, passando no parâmetro pagetoken
+             * Próxima página de resultado XML: igual a query anterior + o atributo next_page_token retornado, passando no parâmetro pagetoken
              * https://maps.googleapis.com/maps/api/place/textsearch/xml?query=brasil&types=beauty_salon&hasNextPage=true&nextPage()=true&key=AIzaSyB-GrtUkpeska3NIDFhD5bxS_ha9mVCKMY&pagetoken=CvQB4QAAAHT7S_wz0xOOWXSPpNHraLj_Z37ciwN2M4OdO8W_9pA7RS-h9IpIjhaBWwIpKhBT8zdouOkFIL86Rp7GW8Po1KztqTJjqXE6hDoRbfFFE4hESffe0WXg4Uym2vGHCZ99kBpOOZSoY8ADogI3TQ0MZgihWMQejXUGybOx0jtKTiHir4iwhU3mhX5JQ2PswGMORBsCKjWNiR4gh_udeDY04Gvi-nNTnhcPCRvU9-aJBbPi_xlH6nvRzUhnVPkOzoaUQudjGVsDxK03wuDY3Hn5bIkXyRz1W1yFmwRKROtX8QaKgNJggGrUx2A3ZXCkQibCyxIQcfTao1JUk2CaQIhfYV7GDxoUGtkPZA7MVC29rfpUHpDYRZRgHPs
+             * 
+             * 
             */
 
             // Exemplo 1
